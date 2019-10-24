@@ -7,16 +7,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script src="script.js"></script>
   </head>
-<body>
+<body style="background-color: cornflowerblue">
   <h1 class="text-center col-sm-12">IQ TEST</h1>
-<div class="container col-sm-12" style="position:absolute; top:50%;left:50%;transform:translate(-50%,-50%);">
- <div class="block" ng-app="Iqtest" ng-controller="icontroller" data-ng-init="exe()">
-   
+<div class="container col-sm-12" style="position:absolute; height:50%;top:50%;left:50%;transform:translate(-50%,-50%);  ">
+ <div class="block" ng-app="Iqtest" ng-controller="icontroller" data-ng-init="exe()"> 
    <h1 class="text-center	">{{x}}</h1>
     <input type="text" class="form-control justify-content-center" ng-model="inputs">
    <div >  <h5 class="block text-center">Your answer is  {{CORRECT}} </h5></div>
-   <h1 class="block text-center"> YOUR SCORE  {{count}}</h1>
-   <br>
+   <div class="float-left"><h4> YOUR SCORE  {{count}}</h4></div>
+   <div class="float-right"><h4>WRONG ATTEMPTS  {{wcount}}</h4></div> 
       <button class="btn btn-block bg-primary" ng-click="exe()" value="submit">TEST</button>
    </div>
  </div>
