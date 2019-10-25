@@ -30,11 +30,9 @@ app.controller('icontroller', function($scope,$timeout) {
 });
 
  $(document).ready(function(){
-   $(document).bind("contextmenu",function(e){
+   $(document).bind("contextmenu cut copy paste",function(e){
       return false;
    });
-   $('input,textarea').bind('cut copy paste', function (e) {
-    e.preventDefault(); 
-});
+   
 });
 
