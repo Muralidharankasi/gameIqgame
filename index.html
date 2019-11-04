@@ -2,23 +2,28 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script src="script.js"></script>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-<body style="background-color: cornflowerblue">
-  <h1 class="text-center ">IQ TEST</h1>
-<div class="container col-xs-9 col-md-7" style="position:absolute; height:50%;top:50%;left:50%;transform:translate(-50%,-50%);  width:100%">
- <div class="block" ng-app="Iqtest" ng-controller="icontroller" data-ng-init="exe()"> 
+<body style="background-color: cornflowerblue" ng-app="Iqtest">
+  <h1 class="text-center col-sm-12">IQ TEST</h1>
+<div class="container col-sm-12" style="position:absolute; height:50%;top:50%;left:50%;transform:translate(-50%,-50%);  ">
+ <div  ng-controller="icontroller" > 
    <h1 class="text-center	">{{x}}</h1>
     <input type="text" class="form-control justify-content-center" ng-model="inputs">
-   <div >  <h5 class="block text-center">Your answer is  {{CORRECT}} </h5></div>
+   <div >  <h5 class=" text-center">Your answer is  {{CORRECT}} </h5></div>
    <div class="float-left"><h4> YOUR SCORE  {{count}}</h4></div>
    <div class="float-right"><h4>WRONG ATTEMPTS  {{wcount}}</h4></div> 
       <button class="btn btn-block bg-primary" ng-click="exe()" value="submit">TEST</button>
    </div>
  </div>
-</div>
-
+<div class="container col-sm-12 p-3 h-100 bg-success row justify-content-center align-items-center text-center" ng-class="style" ng-controller="button">
+    WELCOME<br>
+    The Game is about to check your IQ <br> 
+    Here a word is going to be displayed for four seconds you need to read and capture it in your mind after four seconds
+    you have to type the previously shown word.<br> Every correct one INCREASES SCORE and wrong one is also counted in WRONG ATTEMPTS 
+  <button type="button" class="btn btn-primary btn-block" ng-click="ch()">Primary</button>
+  </div>
 </body>
