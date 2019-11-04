@@ -5,11 +5,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="script.js"></script>
   </head>
-<body class="container col-sm-12" style="background-color: cornflowerblue" ng-app="Iqtest">
+<body class="col-sm-12" style="background-color: cornflowerblue" ng-app="Iqtest">
   <h1 class="text-center col-sm-12">IQ TEST</h1>
-<div class="container col-sm-12" style="position:absolute; height:50%;top:50%;left:50%;transform:translate(-50%,-50%);  ">
+<div class="container" style="position:absolute; height:50%;top:50%;left:50%;transform:translate(-50%,-50%);  ">
  <div  ng-controller="icontroller" > 
    <h1 class="text-center	">{{x}}</h1>
     <input type="text" class="form-control justify-content-center" ng-model="inputs">
@@ -19,11 +20,12 @@
       <button class="btn btn-block bg-primary" ng-click="exe()" value="submit">TEST</button>
    </div>
  </div>
-<div class="container col-sm-12 p-3 h-100 bg-success row justify-content-center align-items-center text-center" ng-class="style" ng-controller="button">
+<div style="left:15px;" class="container col-sm-12 p-3 h-100 bg-success row justify-content-center align-items-center text-center" ng-class="style" ng-controller="button">
     WELCOME<br>
     The Game is about to check your IQ <br> 
     Here a word is going to be displayed for four seconds you need to read and capture it in your mind after four seconds
     you have to type the previously shown word.<br> Every correct one INCREASES SCORE and wrong one is also counted in WRONG ATTEMPTS 
   <button type="button" class="btn btn-primary btn-block" ng-click="ch()">Primary</button>
   </div>
+ 
 </body>
